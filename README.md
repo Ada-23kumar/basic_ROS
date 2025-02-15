@@ -1,8 +1,22 @@
-#basic_ROS
-This is basic
+<head>basic_ROS
+Step 1 — Creating custom talker_listener package
+Remember when we started learning ROS1 and made a custom package with a publisher and subscriber pair? One node publishes and the other constantly listens over a topic. Let’s do that again!
 
-In this projuct I am providing how the ROS2 is working.
+Create our workspace called “ros2_ws”
 
-The thig is that There is two thing 1. create a talker node which is publishing some thing "Hello word from 1 .... ".
+<code>mkdir -p ~/ros2_ws/src</code>
+2. Build the workspace
 
-and there is one node which have the subscription of the publisher of a brodcaster means, a publisher is publishing some data and the subsciber is having the right to see what the publisher is publish
+ROS1 uses catkin, but ROS2 uses colcon to build packages
+<code>
+cd ros2_ws
+colcon build
+</code>
+At this point, you will see “0 packages finished” in the terminal (because there are no packages yet). Additionally, you will now have build, install and logs folders in the ros2_ws.
+
+3. Create a new talker package (we use python)
+<code>
+cd ros2_ws/src
+ros2 pkg create --build-type ament_python talker_listener
+</code>
+Similarly, we can also make a cpp package. Please look at ROS2 official guide.
