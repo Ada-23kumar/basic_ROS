@@ -1,4 +1,6 @@
-<head>basic_ROS
+<h1>basic_ROS</h1>
+<hr>
+   
 Step 1 — Creating custom talker_listener package
 Remember when we started learning ROS1 and made a custom package with a publisher and subscriber pair? One node publishes and the other constantly listens over a topic. Let’s do that again!
 
@@ -6,6 +8,7 @@ Create our workspace called “ros2_ws”
 <div>
 <code>mkdir -p ~/ros2_ws/src</code>
 </div>
+<hr>
 
 2. Build the workspace
 
@@ -17,6 +20,7 @@ colcon build
 
 At this point, you will see “0 packages finished” in the terminal (because there are no packages yet). Additionally, you will now have build, install and logs folders in the ros2_ws.
 
+<hr>
 3. Create a new talker package (we use python)
    
 <code>cd ros2_ws/src
